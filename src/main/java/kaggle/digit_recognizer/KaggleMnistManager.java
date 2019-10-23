@@ -80,20 +80,26 @@ public class KaggleMnistManager {
 				} else {
 					// We set the label 0 as -1 would lead to issues as it a not-existant label
 					labelsArr[rowI] = 0;
+				}
 
-					if (rowI < 100) {
-						for (int i = 0; i < RunKaggleDigitRecognizer.COLS * RunKaggleDigitRecognizer.COLS; i++) {
-							if (i % RunKaggleDigitRecognizer.COLS == 0) {
-								System.out.println();
-							}
-							if (bytes[i] == 0) {
-								System.out.print(' ');
-							} else {
-								System.out.print('x');
-							}
+				if (rowI < 10) {
+					System.out.println("---train= " + train + "--------");
+					for (int i = 0; i < RunKaggleDigitRecognizer.COLS * RunKaggleDigitRecognizer.COLS; i++) {
+						if (i % RunKaggleDigitRecognizer.COLS == 0) {
+							System.out.println();
 						}
-						System.out.println("--------------------");
+						if (bytes[i] == 0) {
+							System.out.print(' ');
+						} else if (bytes[i] > 0 && bytes[i] < 50) {
+							System.out.print('.');
+						} else if (bytes[i] < 0) {
+							System.out.print('x');
+						} else {
+							System.out.print('m');
+						}
 					}
+					System.out.println();
+					System.out.println("--------------------");
 				}
 			});
 		} catch (IOException e) {

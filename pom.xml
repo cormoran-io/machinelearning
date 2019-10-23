@@ -39,6 +39,13 @@
 		</dependency>
 
 		<dependency>
+			<!-- https://deeplearning4j.org/docs/latest/deeplearning4j-nn-visualization#ui -->
+			<groupId>org.deeplearning4j</groupId>
+			<artifactId>deeplearning4j-ui_2.10</artifactId>
+			<version>${deeplearning4j.version}</version>
+		</dependency>
+
+		<dependency>
 			<!-- Helps managing resources -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
