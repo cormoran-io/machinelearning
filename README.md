@@ -1,7 +1,12 @@
-# dl4j-kaggle-titanic
-My entry for kaggle.com's titanic challenge. It reached 0.794 accuracy (about 0.82 on the test set)
+# Various MachineLearning small projects
 
-Updated to work with dl4j 1.0-beta4
+## Kaggle
 
-I've made an entry discussing it here:
-https://www.kaggle.com/c/titanic/discussion/61841
+### Titanic - DeepLearning4J
+
+Based on https://www.kaggle.com/c/titanic/discussion/61841
+
+### Digit Recognizer - DeepLearning4J
+
+Based on https://deeplearning4j.org/tutorials/00-quickstart-for-deeplearning4j
+

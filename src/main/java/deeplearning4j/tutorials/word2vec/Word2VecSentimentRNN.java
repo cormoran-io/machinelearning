@@ -72,7 +72,7 @@ public class Word2VecSentimentRNN {
 			FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_w2vSentiment/");
 	/** Location (local file system) for the Google News vectors. Set this manually. */
 	public static final String WORD_VECTORS_PATH =
-			"/Users/b/workspace_eclipse-2019-06/pytorch/GoogleNews-vectors-negative300.bin.gz";
+			System.getProperty("user.home") + "/Downloads" + "/GoogleNews-vectors-negative300.bin.gz";
 
 	public static void main(String[] args) throws Exception {
 		if (WORD_VECTORS_PATH.startsWith("/PATH/TO/YOUR/VECTORS/")) {
