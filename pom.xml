@@ -38,6 +38,13 @@
 			<version>${deeplearning4j.version}</version>
 		</dependency>
 
+		<dependency>
+			<!-- Helps managing resources -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.0.RELEASE</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>

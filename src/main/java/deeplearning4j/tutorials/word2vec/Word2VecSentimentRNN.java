@@ -65,15 +65,23 @@ import deeplearning4j.tutorials.DataUtilities;
  */
 public class Word2VecSentimentRNN {
 
+	/** Location (local file system) for the Google News vectors. Set this manually (~1.5GB). */
+	public static final String WORD_VECTORS_PATH =
+			System.getProperty("user.home") + "/Downloads" + "/GoogleNews-vectors-negative300.bin.gz";
+
 	/** Data URL for downloading */
 	public static final String DATA_URL = "http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz";
 	/** Location to save and extract the training/testing data */
 	public static final String DATA_PATH =
 			FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_w2vSentiment/");
-	/** Location (local file system) for the Google News vectors. Set this manually. */
-	public static final String WORD_VECTORS_PATH =
-			System.getProperty("user.home") + "/Downloads" + "/GoogleNews-vectors-negative300.bin.gz";
 
+	/**
+	 * This main method should end printing a very negative review like 'Hated it with all my being. Worst movie ever.
+	 * Mentally- scarred. Help me. It was that bad.TRUST ME!!!'
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		if (WORD_VECTORS_PATH.startsWith("/PATH/TO/YOUR/VECTORS/")) {
 			throw new RuntimeException("Please set the WORD_VECTORS_PATH before running this example");
